@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
+var table = require("console.table");
 
 var connection = mysql.createConnection({
 	host: "localhost",
@@ -87,7 +88,7 @@ function inquireThisId() {
 
 						console.log("HERE IS OUR UPDATED INVETORY: ");
 						console.log("------------------------------- \n");
-						console.log(res);
+						console.table(res);
 					});
 
 				} else {
